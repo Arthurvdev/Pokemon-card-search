@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tcgdex/sdk@2/dist/tcgdex.browser.js"></script>
+    <title>CARDS POKEMON SEARCH</title>
+</head>
+<body>
+    <div class="divisão-geral">
+
+        
+    </div>
+
+    <div class="divisão1">
+
+        <div class="logo-conteiner">
+            <img id="logo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4c082d0e-aef9-4f37-adea-d08451522fc7/dap91px-6a685d24-ec88-4201-8d31-ca3a83196acc.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRjMDgyZDBlLWFlZjktNGYzNy1hZGVhLWQwODQ1MTUyMmZjN1wvZGFwOTFweC02YTY4NWQyNC1lYzg4LTQyMDEtOGQzMS1jYTNhODMxOTZhY2MucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.HpF-R8WOy8L4e8G9Ege7qbovNuBm7U9ZjaUBxOHWUcs" alt="">
+        </div>
+
+    
+        <div class="pesquisa-conteiner">
+            <input id="pesquisa" type="text" placeholder="Pesquise aqui"></input>
+            <button onclick="pesquisa()">PESQUISAR</button>
+        </div>
+    </div>
+    
+    <div class="divisão2">
+
+        <div class="resultado-conteiner">
+            <div id="resultado" class="resultado"><h1><span>ESPERANDO</span> PESQUISA...</h1></div> 
+        </div>
+
+    </div>
+    
+
+    
+
+    <div id="overlay" class="overlay" onclick="fecharImagem()">
+        <img id="imagemGrande" class="imagem-grande" />
+    </div>
+    
+    
+</body>
+<script src="script.js"></script>
+
+</html>
