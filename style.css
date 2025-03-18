@@ -86,8 +86,6 @@ body{
     
 }
 
-
-
 .pesquisa-conteiner button{
     padding: 10px;
     border-radius: 0px 0px 5px 5px;
@@ -98,6 +96,7 @@ body{
     font-family: "Chakra Petch", sans-serif;
     transition: 0.3s;
     width: 100%;
+
 }
 
 .pesquisa-conteiner button:hover{
@@ -183,9 +182,22 @@ img:hover > img:not(:hover){
     justify-content: center;
     display: flex;
     box-shadow: none;
+    transition: 0.4s;
+    border-radius: 50px;
+    padding: 10px;
 }
 
 #logo:hover{
-    filter:grayscale(100%);
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #e7cc51;
+
+}
+
+#logo:active{
+    transition: 0.2s;
+    transform: scale(0.6);
+    
+
 }
 
