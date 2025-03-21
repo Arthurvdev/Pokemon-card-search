@@ -7,7 +7,7 @@ async function fetchCard(name) {
 
     if (cardsFiltradas.length > 0) {
       const resultadoDiv = document.getElementById('resultado');
-      resultadoDiv.innerHTML = '';
+      resultadoDiv.innerHTML = '';  // Limpa o conteúdo anterior
 
       cardsFiltradas.forEach(card => {
         if (card.image) {
@@ -54,3 +54,11 @@ function fecharImagem() {
   const overlay = document.getElementById('overlay');
   overlay.style.display = 'none';  // Fecha o overlay quando clicado
 }
+
+// Adiciona um evento para pressionar Enter no campo de pesquisa
+document.getElementById('pesquisa').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {  // Verifica se a tecla pressionada foi o Enter
+    event.preventDefault();  // Previne o comportamento padrão (por exemplo, enviar o formulário)
+    pesquisa();  // Chama a função de pesquisa
+  }
+});
