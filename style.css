@@ -57,6 +57,17 @@ body{
     width: 20%;
 }
 
+.title{
+    padding-top: 10vh;
+}
+
+.title h1{
+    font-family: "Chakra Petch", sans-serif;
+    color: #51447b;
+    text-align: center;
+    font-size: 1vw;
+}
+
 
 .pesquisa-conteiner{
     display:grid;
@@ -182,7 +193,7 @@ img:hover > img:not(:hover){
 
 
 .logo-conteiner{
-    margin-top: 15vh;
+    margin-top: 5vh;
     margin-bottom: 0vh;
     width: 100%;
     text-align: center;
