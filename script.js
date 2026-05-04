@@ -1,4 +1,5 @@
 const tcgdex = new TCGdex('en');
+const divRsultado = document.querySelector('.resultado-conteiner');
 
 async function fetchCard(name) {
   try {
@@ -7,21 +8,22 @@ async function fetchCard(name) {
 
     if (cardsFiltradas.length > 0) {
       const resultadoDiv = document.getElementById('resultado');
+      divRsultado.style.height = 'auto';
       resultadoDiv.innerHTML = '';  // Limpa o conteúdo anterior
 
       cardsFiltradas.forEach(card => {
         if (card.image) {
-          const imageUrl = card.image + '/high.webp'; 
+          const imageUrl = card.image + '/low.webp'; 
           const imgElement = document.createElement('img'); 
           imgElement.src = imageUrl;  
           imgElement.alt = card.name;  
-          imgElement.style.width = '250px';  
+          imgElement.style.width = '240px';  
           imgElement.style.margin = '20px';
           imgElement.style.cursor = 'pointer';  
           
-          // Adiciona o evento de clique para exibir a imagem maior
+          
           imgElement.onclick = function() {
-            mostrarImagemMaior(imageUrl); // Exibe a imagem maior quando clicada
+            mostrarImagemMaior(card.image + '/high.webp'); // Exibe a imagem maior e com uma qualidade melhor quando clicada
           };
 
           resultadoDiv.appendChild(imgElement);
@@ -55,10 +57,9 @@ function fecharImagem() {
   overlay.style.display = 'none';  // Fecha o overlay quando clicado
 }
 
-// Adiciona um evento para pressionar Enter no campo de pesquisa
 document.getElementById('pesquisa').addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {  // Verifica se a tecla pressionada foi o Enter
-    event.preventDefault();  // Previne o comportamento padrão (por exemplo, enviar o formulário)
-    pesquisa();  // Chama a função de pesquisa
+  if (event.key === 'Enter') {  
+    event.preventDefault(); 
+    pesquisa();  
   }
 });

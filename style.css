@@ -132,9 +132,13 @@ body{
 
 .resultado-conteiner{
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     margin-left: 20vw;
     border: 2px dashed #51447b;
+    height: 100vh;
+    transition: 0.5s;
+    text-align: center;
 }
 
 .resultado{
@@ -186,8 +190,8 @@ img:hover > img:not(:hover){
 }
 
 .imagem-grande {
-    max-width: 90%;
-    max-height: 90%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
 }
 
@@ -222,5 +226,10 @@ img:hover > img:not(:hover){
     transition: 0.2s;
     transform: scale(0.6);
 
+}
+
+#pikachu_correndo{
+    width: 100px;
+    box-shadow: none;
 }
 
